@@ -5,7 +5,6 @@
  */
 package com.improvisados.trivia4j;
 
-import com.improvisados.trivia4j.dataproviders.questionprovider.opentriviadb.OpenTriviaDBQuestionsProvider;
 import com.improvisados.trivia4j.logic.Trivia;
 import com.improvisados.trivia4j.events.ITriviaEventListener;
 import com.improvisados.trivia4j.logic.Question;
@@ -27,64 +26,7 @@ public class Main
      */
     public static void main(String[] args) throws InterruptedException
     {
-        Trivia t=new Trivia();
-        
-        OpenTriviaDBQuestionsProvider p=OpenTriviaDBQuestionsProvider.getInstance();
-        
-        p.withAmmount(15);
-        p.withCategory(15);
-        
-        List<Question> questions=p.getQuestions();
        
-        for(Question q: questions)
-        {
-            t.addQuestion(q);
-        }
-        
-        
-        t.addEventListener(new ITriviaEventListener()
-        {
-            @Override
-            public void onTriviaStart()
-            {
-                System.out.println("Trivia is about to start");
-            }
-
-            @Override
-            public void onNewQuestion(Question q,int index)
-            {
-                System.out.println("Question :"+index+"/"+t.size());
-                System.out.println("Category: "+q.getCategory());
-                System.out.println("Dificulty: "+q.getDifficulty());
-                System.out.println(q.getQuestion());
-                System.out.println("");
-                int itemChar=97;
-                for(String anwsers:q.getAnwsers())
-                {
-                    System.out.println(((char)itemChar)+" "+anwsers);
-                    itemChar++;
-                }
-                
-            }
-
-            @Override
-            public void onQuestionTimeOut(Question q,int index)
-            {
-                System.out.println("");
-                System.out.println("Correct Anwser: "+q.getCorrectAnwser());
-            }
-
-            @Override
-            public void onTriviaFinish(boolean wasCanceled)
-            {
-                System.out.println("Trivia has finshed "+wasCanceled);
-            }
-        });
-        
-        t.start();
-        
-        Thread.sleep(90000);
-        
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.improvisados.trivia4j.dataproviders.questionprovider;
+package com.improvisados.trivia4j.dataprovider.questionsprovider;
 
 import com.improvisados.trivia4j.logic.Question;
 import java.util.List;

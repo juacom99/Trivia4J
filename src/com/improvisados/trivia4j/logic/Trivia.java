@@ -5,7 +5,7 @@
  */
 package com.improvisados.trivia4j.logic;
 
-import com.improvisados.trivia4j.dataproviders.questionprovider.QuestionProvider;
+import com.improvisados.trivia4j.dataprovider.questionsprovider.QuestionProvider;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
