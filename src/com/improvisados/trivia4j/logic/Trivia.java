@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 public class Trivia implements ActionListener
 {
 
-    public static final int DEFAULT_TIME = 30000;
+    public static final int DEFAULT_TIME = 15000;
     private static final int[] POINTS =
     {
         7, 5, 3, 1
@@ -126,23 +126,31 @@ public class Trivia implements ActionListener
         return output;
     }
 
-    public void pause()
+    public boolean pause()
     {
+        boolean output=false;
         if (this.state == TriviaState.PLAYING)
         {
             this.timer.stop();
             this.state = TriviaState.PAUSED;
+            output=true;
         }
+        
+        return output;
     }
 
-    public void resume()
+    public boolean resume()
     {
+        boolean output=false;
         if (this.state == TriviaState.PAUSED)
         {
             this.currentQuestion--;
             this.state = TriviaState.PLAYING;
             this.timer.restart();
+            output=true;
         }
+        
+        return output;
     }
 
     private void notifyStart()

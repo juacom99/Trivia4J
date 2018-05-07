@@ -5,15 +5,6 @@
  */
 package com.improvisados.trivia4j;
 
-import com.improvisados.trivia4j.logic.Trivia;
-import com.improvisados.trivia4j.events.ITriviaEventListener;
-import com.improvisados.trivia4j.logic.Question;
-import com.improvisados.trivia4j.logic.QuestionCategory;
-import com.improvisados.trivia4j.logic.QuestionDifficulty;
-import com.improvisados.trivia4j.logic.QuestionType;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author joaquin

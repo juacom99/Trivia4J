@@ -21,7 +21,7 @@ public enum QuestionType
         this.value = value;
     }
     
-    public static QuestionType getValue(String val)
+    public static QuestionType getValue(String val) throws IllegalArgumentException
     {
         QuestionType output=null;
         for(QuestionType qt:QuestionType.values())
@@ -34,4 +34,12 @@ public enum QuestionType
         }
         return output;
     }
+
+    @Override
+    public String toString()
+    {
+        return super.toString().toLowerCase();
+    }
+    
+    
 }

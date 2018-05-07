@@ -23,7 +23,7 @@ public enum QuestionDifficulty
     }
     
     
-    public static QuestionDifficulty getValue(String val)
+    public static QuestionDifficulty getValue(String val) throws IllegalArgumentException
     {
         QuestionDifficulty output=null;
         for(QuestionDifficulty qd:QuestionDifficulty.values())
@@ -36,5 +36,13 @@ public enum QuestionDifficulty
         }
         return output;
     }
+
+    @Override
+    public String toString()
+    {
+        return super.toString().toLowerCase();
+    }
+    
+    
     
 }
