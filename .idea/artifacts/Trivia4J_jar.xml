@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Trivia4J:jar">
+    <output-path>$PROJECT_DIR$/dist/</output-path>
+    <root id="archive" name="Trivia4J.jar">
+      <element id="module-output" name="Trivia4J" />
+    </root>
+  </artifact>
+</component>
